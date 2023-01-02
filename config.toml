@@ -1,0 +1,73 @@
+## Basic Configuration
+
+baseurl = "https://1980.is/"
+builddrafts = false
+canonifyurls = false
+languageCode = "en-US"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+author = "Armann Jakob Palsson"
+title = "Are we there yet?"
+
+theme = "hugo-goa"
+
+enableEmoji = true
+
+## Hugo Built-in Features
+disqusShortname = "https-shenoybr-github-io-hugo-goa-demo" # Comment out to disable Disqus.
+#googleAnalytics = "XYZ"
+enableRobotsTXT = true
+
+## Site Settings
+[params]
+author = "Armann Jakob Palsson"
+intro = "Husband, Father, Friend, Skateboarder, <br/>  CSGO player, and Linux Extraordinaire :)" 
+description = "Currently @Advania - Iceland. <br/>  \"Just Do The Next Indicated Thing.\""
+authorimage = "armann2.jpg"
+dateformat = "Jan 2, 2006"
+
+## Site Meta Settings
+[params.meta]
+description = "Simple minimalist theme"
+keywords = "minimalist,blog,goa,hugo,developer"
+
+## Social Accounts
+[params.social]
+github = "1980is"
+linkedin = "armann-palsson"
+twitter = "ArmannPalsson"
+youtube = "channel/UCaS9SwHG_VrumP7iiCSuGig"
+
+## Extras
+[params.extra]
+copyright = "© 2022. Armann Jakob Palsson. [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)."
+poweredby = true
+highlightjs = true
+socialmarkup = true
+toc = true
+displayrssicon = false
+
+## Main Menu
+[[menu.main]]
+    name = "blog"
+    weight = 100
+    identifier = "blog"
+    url = "/posts/"
+[[menu.main]]
+    name = "about"
+    identifier = "about"
+    weight = 200
+    url = "/about/"
+#[[menu.main]]
+#   name = "coderag"
+#   weight = 300
+#    url = "/coderag/"
+
+#This enables html and markdown in variable text strings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
