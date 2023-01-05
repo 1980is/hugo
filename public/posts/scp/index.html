@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://1980.is/images/featuredscp_hufdaa388111e5cf949af96851bf432d3f_46599_600x0_resize_box_3.png"/>
+
+<meta name="twitter:title" content="SCP Cheatsheet"/>
+<meta name="twitter:description" content="All you need to know about SCP"/>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="Simple minimalist theme">
+<meta name="keywords" content="minimalist,blog,goa,hugo,developer">
+
+<title>
+  Are we there yet? - SCP Cheatsheet 
+</title>
+
+<meta name="generator" content="Hugo 0.92.2" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://1980.is/css/main.css">
+<link rel="stylesheet" href="https://1980.is/css/custom.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body lang="en-US">
+<div class="container">
+
+
+<header class="text-left title">
+  <h1 class="title">SCP Cheatsheet</h1>
+</header>
+<section id="category-pane" class="meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+        PUBLISHED ON JAN 5, 2023 
+       / 1 MIN READ
+      
+      
+      
+      —
+      
+      
+      <a class="meta" href="/categories/linux">LINUX</a>
+      
+      
+      
+    </h6>
+  </div>
+  
+</section>
+<section id="content-pane" class="">
+  <div class="col-md-12 text-justify content">
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#copy-local-file-to-a-remote-host">Copy local file to a remote host</a></li>
+    <li><a href="#copy-a-file-from-a-remote-host">Copy a file from a remote host</a></li>
+    <li><a href="#copy-local-folder-to-a-remote-server">Copy local folder to a remote server</a></li>
+    <li><a href="#copy-a-remote-folder">Copy a remote folder</a></li>
+    <li><a href="#copy-a-file-from-a-remote-server-to-a-remote-server">Copy a file from a remote server to a remote server</a></li>
+    <li><a href="#scp-flagsoptions">SCP Flags/Options</a></li>
+    <li><a href="#debug">Debug</a></li>
+  </ul>
+</nav>
+    
+    <h2 id="copy-local-file-to-a-remote-host">Copy local file to a remote host</h2>
+<p><code>scp request.csv armann@192.168.122.164:/home/armann/Documents/</code> <br>
+reqquest.csv needs to be in your current directory.</p>
+<h2 id="copy-a-file-from-a-remote-host">Copy a file from a remote host</h2>
+<p><code>scp armann@192.168.122.164:/tmp/codepipeline-user.pdf .</code> <br>
+The dot at the end represents your current local directory.</p>
+<h2 id="copy-local-folder-to-a-remote-server">Copy local folder to a remote server</h2>
+<p><code>scp -r /home/armann/Music/ armann@192.168.122.164:/tmp/</code></p>
+<h2 id="copy-a-remote-folder">Copy a remote folder</h2>
+<p><code>scp -r armann@192.168.122.164:/var/log/ /home/armann/</code></p>
+<h2 id="copy-a-file-from-a-remote-server-to-a-remote-server">Copy a file from a remote server to a remote server</h2>
+<p><code>scp armann@64.227.47.13:~/random.sh devarmann@1980.is:/tmp/</code></p>
+<h2 id="scp-flagsoptions">SCP Flags/Options</h2>
+<p><strong>–r</strong> Recursively copy entire directories. Note that this follows symbolic links encountered in the tree traversal.</p>
+<p><strong>-C</strong> Compression enable. Passes the -C flag to ssh to enable compression.</p>
+<p><strong>-l</strong> Limits the used bandwidth, specified in Kbit/s.</p>
+<p><strong>-o</strong> Can be used to pass options to ssh in the format used in ssh_config.</p>
+<p><strong>-P</strong> Specifies the port to connect to on the remote host. Note that this option is written with a capital ‘P.’</p>
+<p><strong>-p</strong> Preserves modification times, access times, and modes from the original file.</p>
+<p><strong>-q</strong> Disables the progress meter as well as warning and diagnostic messages from ssh.</p>
+<p><strong>-v</strong> Verbose mode. Print debugging messages about progress. This is helpful in debugging connection, authentication, and configuration problems.</p>
+<h2 id="debug">Debug</h2>
+<p>Received disconnect from 18.130.233.91 port 22:2: <strong>Too many authentication failures</strong></p>
+<p>Most likely you have five or more ssh keys loaded. Check how many keys you have with <code>ssh-add -l</code></p>
+<p>If you see five keys or more you are out of luck for now. Remove one of the keys you are not going to be needing soon.</p>
+<p><code>ssh-add -L ~/.ssh/id_ed25519yourprivatekey</code></p>
+<p>If that doesn&rsquo;t work you can remove keys with <code>ssh-add -D</code></p>
+<p>Your ssh client will attempt to use all the keys from <code>ssh-agent</code> one by one before it gets to use the key you specified with <code>-i</code>. Each attempt counts as an <em>authentication failure</em> and <strong>by default only 5 attempts are allowed</strong> by the SSH server you are getting the error you see. <strong>Too many authentication failures</strong>.</p>
+
+
+<img src="/images/featurescp_hufdaa388111e5cf949af96851bf432d3f_46599_600x0_resize_box_3.png" alt="How to SCP data"  class="center">
+
+
+
+  </div>
+</section>
+<section id="tag-pane" class="meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
+      
+      
+      
+      TAGS:
+      
+      
+      <a class="meta" href="/tags/cheatsheet">CHEATSHEET</a>, 
+      
+      <a class="meta" href="/tags/ssh">SSH</a>
+      
+      
+      
+    </h6>
+  </div>
+  
+</section>
+
+
+
+
+<section id="menu-pane" class="menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://1980.is/posts/rhel9rootpasswd/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/posts">posts</a></span>
+  
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://1980.is/">home</a></h4>
+</section>
+
+
+
+<footer class="text-center footer">
+  <hr />
+  
+  <h6 class="text-center copyright">© 2022. Armann Jakob Palsson. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  
+  <h6 class="text-center powered">Powered by <a href="https://gohugo.io/">Hugo  v0.92.2</a></h6>
+  
+      
+  
+</footer>
+
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+
+<script type="text/javascript">
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/main.js"></script>
+<script src="/js/custom.js"></script>
+</body>
+</html>
+
+

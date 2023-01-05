@@ -2,14 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://1980.is/about/</loc>
-    <lastmod>2022-10-30T15:42:16+00:00</lastmod>
-  </url><url>
     <loc>https://1980.is/</loc>
-    <lastmod>2022-02-04T16:23:15+00:00</lastmod>
+    <lastmod>2023-01-05T15:06:03+00:00</lastmod>
   </url><url>
     <loc>https://1980.is/categories/</loc>
-    <lastmod>2022-02-04T16:23:15+00:00</lastmod>
+    <lastmod>2023-01-05T15:06:03+00:00</lastmod>
+  </url><url>
+    <loc>https://1980.is/tags/cheatsheet/</loc>
+    <lastmod>2023-01-05T15:06:03+00:00</lastmod>
+  </url><url>
+    <loc>https://1980.is/categories/linux/</loc>
+    <lastmod>2023-01-05T15:06:03+00:00</lastmod>
+  </url><url>
+    <loc>https://1980.is/posts/</loc>
+    <lastmod>2023-01-05T15:06:03+00:00</lastmod>
+  </url><url>
+    <loc>https://1980.is/posts/scp/</loc>
+    <lastmod>2023-01-05T15:06:03+00:00</lastmod>
+  </url><url>
+    <loc>https://1980.is/tags/ssh/</loc>
+    <lastmod>2023-01-05T15:06:03+00:00</lastmod>
+  </url><url>
+    <loc>https://1980.is/tags/</loc>
+    <lastmod>2023-01-05T15:06:03+00:00</lastmod>
+  </url><url>
+    <loc>https://1980.is/posts/rhel9rootpasswd/</loc>
+    <lastmod>2023-01-02T19:11:57+00:00</lastmod>
+  </url><url>
+    <loc>https://1980.is/categories/rhca/</loc>
+    <lastmod>2023-01-02T19:11:57+00:00</lastmod>
+  </url><url>
+    <loc>https://1980.is/about/</loc>
+    <lastmod>2022-10-30T15:42:16+00:00</lastmod>
   </url><url>
     <loc>https://1980.is/categories/cybersecurity/</loc>
     <lastmod>2022-02-04T16:23:15+00:00</lastmod>
@@ -20,15 +44,10 @@
     <loc>https://1980.is/categories/motivation/</loc>
     <lastmod>2022-02-04T16:23:15+00:00</lastmod>
   </url><url>
-    <loc>https://1980.is/posts/</loc>
-    <lastmod>2022-02-04T16:23:15+00:00</lastmod>
-  </url><url>
     <loc>https://1980.is/categories/personal/</loc>
     <lastmod>2022-02-01T19:22:54+00:00</lastmod>
   </url><url>
     <loc>https://1980.is/posts/amitooold/</loc>
     <lastmod>2022-02-01T19:22:54+00:00</lastmod>
-  </url><url>
-    <loc>https://1980.is/tags/</loc>
   </url>
 </urlset>

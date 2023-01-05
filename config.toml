@@ -28,6 +28,8 @@ intro = "Husband, Father, Friend, Skateboarder, <br/>  CSGO player, and Linux Ex
 description = "Currently @Advania - Iceland. <br/>  \"Just Do The Next Indicated Thing.\""
 authorimage = "armann2.jpg"
 dateformat = "Jan 2, 2006"
+images = ['site-feature-image.jpg']
+
 
 ## Site Meta Settings
 [params.meta]

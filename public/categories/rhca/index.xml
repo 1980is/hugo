@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RHCA on Are we there yet?</title>
+    <link>https://1980.is/categories/rhca/</link>
+    <description>Recent content in RHCA on Are we there yet?</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 02 Jan 2023 19:11:57 +0000</lastBuildDate><atom:link href="https://1980.is/categories/rhca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reset Root Password RHEL9</title>
+      <link>https://1980.is/posts/rhel9rootpasswd/</link>
+      <pubDate>Mon, 02 Jan 2023 19:11:57 +0000</pubDate>
+      
+      <guid>https://1980.is/posts/rhel9rootpasswd/</guid>
+      <description>Tip of the day for all you Red Hat 9 administrators out there. Need to reset the root password? Either for the RHCSA exam or in the field?
+Things have changed a bit in RHEL 9. &amp;ldquo;rd.break&amp;rdquo; does not work anymore. These are the steps that need to be taken.
+ Find the line that loads the Linux kernel and add &amp;ldquo;init=/bin/bash&amp;rdquo; to the end of the line. mount -o remount,rw / This is necessary because it&amp;rsquo;s mounted as read-only.</description>
+    </item>
+    
+  </channel>
+</rss>

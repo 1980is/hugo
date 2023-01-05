@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Are we there yet?</title>
+    <link>https://1980.is/categories/linux/</link>
+    <description>Recent content in Linux on Are we there yet?</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 05 Jan 2023 15:06:03 +0000</lastBuildDate><atom:link href="https://1980.is/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SCP Cheatsheet</title>
+      <link>https://1980.is/posts/scp/</link>
+      <pubDate>Thu, 05 Jan 2023 15:06:03 +0000</pubDate>
+      
+      <guid>https://1980.is/posts/scp/</guid>
+      <description>Copy local file to a remote host scp request.csv armann@192.168.122.164:/home/armann/Documents/ reqquest.csv needs to be in your current directory.
+Copy a file from a remote host scp armann@192.168.122.164:/tmp/codepipeline-user.pdf . The dot at the end represents your current local directory.
+Copy local folder to a remote server scp -r /home/armann/Music/ armann@192.168.122.164:/tmp/
+Copy a remote folder scp -r armann@192.168.122.164:/var/log/ /home/armann/
+Copy a file from a remote server to a remote server scp armann@64.227.47.13:~/random.sh devarmann@1980.</description>
+    </item>
+    
+    <item>
+      <title>Reset Root Password RHEL9</title>
+      <link>https://1980.is/posts/rhel9rootpasswd/</link>
+      <pubDate>Mon, 02 Jan 2023 19:11:57 +0000</pubDate>
+      
+      <guid>https://1980.is/posts/rhel9rootpasswd/</guid>
+      <description>Tip of the day for all you Red Hat 9 administrators out there. Need to reset the root password? Either for the RHCSA exam or in the field?
+Things have changed a bit in RHEL 9. &amp;ldquo;rd.break&amp;rdquo; does not work anymore. These are the steps that need to be taken.
+ Find the line that loads the Linux kernel and add &amp;ldquo;init=/bin/bash&amp;rdquo; to the end of the line. mount -o remount,rw / This is necessary because it&amp;rsquo;s mounted as read-only.</description>
+    </item>
+    
+  </channel>
+</rss>

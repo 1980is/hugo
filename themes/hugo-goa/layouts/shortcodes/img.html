@@ -1,5 +1,4 @@
 {{ $img := resources.GetMatch (.Get "src") }}
 
-<img src="{{ ($img.Resize "500x").RelPermalink }}" {{ with .Get "alt" }}alt="{{ . }}"{{ else }}alt="" {{ end }} {{ with .Get "class" }} class="{{ . }}"{{ else }}class=""{{ end }}>
+<img src="{{ ($img.Resize "600x").RelPermalink }}" {{ with .Get "alt" }}alt="{{ . }}"{{ else }}alt="" {{ end }} {{ with .Get "class" }} class="{{ . }}"{{ else }}class=""{{ end }}>
 
-<!-- <img src="{{ ($img.Resize "500x").RelPermalink }}" {{ with .Get "alt" }}alt="{{ . }}"{{ else }}alt=""{{ end }}> -->

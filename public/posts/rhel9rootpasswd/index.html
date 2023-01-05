@@ -5,8 +5,10 @@
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://1980.is/site-feature-image.jpg"/>
 
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="Currently @Advania - Iceland. &lt;br/&gt;  &#34;Just Do The Next Indicated Thing.&#34;"/>
+<meta name="twitter:title" content="Reset Root Password RHEL9"/>
+<meta name="twitter:description" content="Tip of the day for all you Red Hat 9 administrators out there. Need to reset the root password? Either for the RHCSA exam or in the field?
+Things have changed a bit in RHEL 9. &ldquo;rd.break&rdquo; does not work anymore. These are the steps that need to be taken.
+ Find the line that loads the Linux kernel and add &ldquo;init=/bin/bash&rdquo; to the end of the line. mount -o remount,rw / This is necessary because it&rsquo;s mounted as read-only."/>
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,12 +19,11 @@
 <meta name="keywords" content="minimalist,blog,goa,hugo,developer">
 
 <title>
-  Are we there yet? - Categories 
+  Are we there yet? - Reset Root Password RHEL9 
 </title>
 
 <meta name="generator" content="Hugo 0.92.2" />
 
-<link rel="alternate" type="application/rss&#43;xml" href="https://1980.is/categories/index.xml">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
 
@@ -48,104 +49,71 @@
 <div class="container">
 
 
-<section id="list-pane" class="list">
-  <ul >
+<header class="text-left title">
+  <h1 class="title">Reset Root Password RHEL9</h1>
+</header>
+<section id="category-pane" class="meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+        PUBLISHED ON JAN 2, 2023 
+       / 0 MIN READ
+      
+      
+      
+      —
+      
+      
+      <a class="meta" href="/categories/linux">LINUX</a>, 
+      
+      <a class="meta" href="/categories/rhca">RHCA</a>
+      
+      
+      
+    </h6>
+  </div>
+  
+</section>
+<section id="content-pane" class="">
+  <div class="col-md-12 text-justify content">
     
-    <li class="list-entry">
+    <p>Tip of the day for all you Red Hat 9 administrators out there. Need to reset the root password? Either for the RHCSA exam or in the field?</p>
+<p>Things have changed a bit in RHEL 9. <strong>&ldquo;rd.break&rdquo;</strong> does not work anymore. These are the steps that need to be taken.</p>
+<ol>
+<li>Find the line that loads the Linux kernel and add &ldquo;init=/bin/bash&rdquo; to the end of the line.</li>
+<li><code>mount -o remount,rw /</code> This is necessary because it&rsquo;s mounted as read-only.</li>
+<li><code>passwd root</code></li>
+<li><code>touch /.autorelabel</code></li>
+<li><code>exec /usr/lib/systemd/systemd/</code></li>
+</ol>
+<p>This command will reboot the machine and now you have a new root password! 😎</p>
 
+  </div>
+</section>
+<section id="tag-pane" class="meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
       
-      
-      <br />
-      <a class="list-entry-link" href="/categories/personal/">Personal</a>
-      <p class="meta">
-         FEB 1, 2022 
-	- 0 MIN READ 
-        <span class="category">
-        
-        </span>
-      </p>
-      <p class="excerpt">
-      
-      </p>
-    </li>
-    
-    <li class="list-entry">
-
-      
-      
-      <br />
-      <a class="list-entry-link" href="/categories/motivation/">Motivation</a>
-      <p class="meta">
-         FEB 4, 2022 
-	- 0 MIN READ 
-        <span class="category">
-        
-        </span>
-      </p>
-      <p class="excerpt">
-      
-      </p>
-    </li>
-    
-    <li class="list-entry">
-
-      
-      
-      <br />
-      <a class="list-entry-link" href="/categories/cybersecurity/">Cybersecurity</a>
-      <p class="meta">
-         FEB 4, 2022 
-	- 0 MIN READ 
-        <span class="category">
-        
-        </span>
-      </p>
-      <p class="excerpt">
-      
-      </p>
-    </li>
-    
-    <li class="list-entry">
-
-      
-      
-      <br />
-      <a class="list-entry-link" href="/categories/rhca/">RHCA</a>
-      <p class="meta">
-         JAN 2, 2023 
-	- 0 MIN READ 
-        <span class="category">
-        
-        </span>
-      </p>
-      <p class="excerpt">
-      
-      </p>
-    </li>
-    
-    <li class="list-entry">
-
-      
-      
-      <br />
-      <a class="list-entry-link" href="/categories/linux/">Linux</a>
-      <p class="meta">
-         JAN 5, 2023 
-	- 0 MIN READ 
-        <span class="category">
-        
-        </span>
-      </p>
-      <p class="excerpt">
-      
-      </p>
-    </li>
-    
-  </ul>
+    </h6>
+  </div>
+  
 </section>
 
 
+
+
 <section id="menu-pane" class="menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://1980.is/posts/2022cybersecurity/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/posts">posts</a></span>
+  
+  
+  <span><a class="menu-item" href="https://1980.is/posts/scp/"> | next &gt;</a></span>
+  
   
   <h4 class="text-center"><a class="menu-item" href="https://1980.is/">home</a></h4>
 </section>
@@ -183,4 +151,5 @@ hljs.initHighlightingOnLoad();
 <script src="/js/custom.js"></script>
 </body>
 </html>
+
 
